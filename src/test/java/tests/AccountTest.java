@@ -37,5 +37,4 @@ public class AccountTest extends BaseTest {
         assertEquals(addNewAccount, "Mikita Kuzminich", "Account didn't add");
     }
 
-
 }
