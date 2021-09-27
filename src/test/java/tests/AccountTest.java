@@ -18,20 +18,20 @@ public class AccountTest extends BaseTest {
                 "+375444444444",
                 "80174444444",
                 "https://knn.lightning.force.com/",
-                "0",
+                "10",
                 "1",
-                "City",
-                "State",
-                "City",
-                "State",
-                "111111",
-                "111111",
-                "111111",
-                "Country");
+                "Minsk",
+                "Minsk",
+                "Minsk",
+                "Province",
+                "12345",
+                "54321",
+                "123123",
+                "Belarus");
         new AccountPage(driver).createTextArea(
                 "description",
-                "Street",
-                "Street");
+                "Street2",
+                "Street1");
         accountPage.save();
         String addNewAccount = driver.findElement(By.xpath("//span[@class='custom-truncate uiOutputText']")).getText();
         assertEquals(addNewAccount, "Mikita Kuzminich", "Account didn't add");
