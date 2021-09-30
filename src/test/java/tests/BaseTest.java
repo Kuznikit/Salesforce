@@ -4,7 +4,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.opera.OperaDriver;
-import org.testng.ITestListener;
 import org.testng.annotations.*;
 import pages.AccountPage;
 import pages.LoginPage;
@@ -35,7 +34,7 @@ public class BaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
-        driver.quit();
+        //driver.quit();
     }
 
 }

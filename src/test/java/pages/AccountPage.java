@@ -1,8 +1,11 @@
 package pages;
 
+import models.Account;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+import wrappers.DropDown;
+import wrappers.Input;
+import wrappers.TextArea;
 
 public class AccountPage extends BasePage {
 
@@ -11,29 +14,31 @@ public class AccountPage extends BasePage {
 
     }
 
-    public void open() {
+    public AccountPage open() {
         driver.get(ACCOUNT_URL);
-
+        return this;
     }
 
-    public void createAccount(String accountName, String phone, String fax, String webSite, String employees,
-                              String annualRevenue, String billingCity, String billingStateProvince,
-                              String shippingCity, String shippingStateProvince, String billingZipPostalCode,
-                              String billingCountry, String shippingZipPostalCode, String shippingCountry) {
-        new Input(driver, "Account Name").write(accountName);
-        new Input(driver, "Phone").write(phone);
-        new Input(driver, "Fax").write(fax);
-        new Input(driver, "Website").write(webSite);
-        new Input(driver, "Employees").write(employees);
-        new Input(driver, "Annual Revenue").write(annualRevenue);
-        new Input(driver, "Billing State/Province").write(billingStateProvince);
-        new Input(driver, "Billing City").write(billingCity);
-        new Input(driver, "Shipping City").write(shippingCity);
-        new Input(driver, "Shipping State/Province").write(shippingStateProvince);
-        new Input(driver, "Billing Zip/Postal Code").write(billingZipPostalCode);
-        new Input(driver, "Billing Country").write(billingCountry);
-        new Input(driver, "Shipping Zip/Postal Code").write(shippingZipPostalCode);
-        new Input(driver, "Shipping Country").write(shippingCountry);
+    public void clickNew() {
+        driver.findElement(By.cssSelector("[title=New]")).click();
+    }
+
+
+    public void createAccount(Account account) {
+        new Input(driver, "Account Name").write(account.getAccountName());
+        new Input(driver, "Phone").write(account.getPhone());
+        new Input(driver, "Fax").write(account.getFax());
+        new Input(driver, "Website").write(account.getWebSite());
+        new Input(driver, "Employees").write(account.getEmployees());
+        new Input(driver, "Annual Revenue").write(account.getAnnualRevenue());
+        new Input(driver, "Billing State/Province").write(account.getBillingStateProvince());
+        new Input(driver, "Billing City").write(account.getBillingCity());
+        new Input(driver, "Shipping City").write(account.getShippingCity());
+        new Input(driver, "Shipping State/Province").write(account.getShippingStateProvince());
+        new Input(driver, "Billing Zip/Postal Code").write(account.getBillingZipPostalCode());
+        new Input(driver, "Billing Country").write(account.getBillingCountry());
+        new Input(driver, "Shipping Zip/Postal Code").write(account.getShippingZipPostalCode());
+        new Input(driver, "Shipping Country").write(account.getShippingCountry());
 
     }
 
@@ -43,9 +48,12 @@ public class AccountPage extends BasePage {
         new TextArea(driver, "Billing Street").write(billingStreet);
 
     }
+    public void createDropDown (String type, String industry){
+        new DropDown(driver, "Type").select(type);
+        new DropDown(driver, "Industry").select(industry);
+    }
 
-    public void save() {
+    public void clickSave() {
         driver.findElement(By.xpath("//button[@title='Save']")).click();
-
     }
 }
