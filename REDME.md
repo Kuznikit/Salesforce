@@ -1,7 +1,7 @@
-# [INFO] The following dependencies in Dependencies have newer versions:
-# [INFO]   io.github.bonigarcia:webdrivermanager ................. 5.0.1 -> 5.0.3
-# [INFO]   org.seleniumhq.selenium:selenium-chrome-driver ...
-# [INFO]                                                   3.141.59 -> 4.0.0-rc-2
+<p> [INFO] The following dependencies in Dependencies have newer versions:
+<p> [INFO]   io.github.bonigarcia:webdrivermanager ................. 5.0.1 -> 5.0.3
+<p> [INFO]   org.seleniumhq.selenium:selenium-chrome-driver ...
+<p> [INFO]                                                   3.141.59 -> 4.0.0-rc-2
 # [INFO]   org.seleniumhq.selenium:selenium-java ......... 3.141.59 -> 4.0.0-rc-2
 # [INFO]   org.slf4j:slf4j-nop ........................... 1.7.13 -> 2.0.0-alpha5
 # [INFO]
