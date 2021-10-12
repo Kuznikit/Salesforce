@@ -8,4 +8,11 @@
             <class name="tests.AccountTest"/>
         </classes>
     </test>
+    <test name="Thread # 2">
+        <parameter name="browser" value="opera"></parameter>
+        <classes>
+            <class name="tests.LoginTest"/>
+            <class name="tests.AccountTest"/>
+        </classes>
+    </test> <!-- Test -->
 </suite>
